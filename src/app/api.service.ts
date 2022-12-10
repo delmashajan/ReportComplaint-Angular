@@ -11,6 +11,9 @@ export class ApiService {
   userLogin=(data:any)=>{
     return this.http.post("http://localhost:8080/userlogin",data);
   }
+  userRegister=(data:any)=>{
+    return this.http.post("http://localhost:8080/userReg",data)
+  }
 
 
 }

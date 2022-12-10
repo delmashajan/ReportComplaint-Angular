@@ -12,8 +12,12 @@ export class AdminLoginComponent {
 
   readValue=()=>{
     if (this.username=="admin" && this.password=="12345") {
+
+      alert("success")
       
     } else {
+
+      alert("login failed")
       
     }
   }
