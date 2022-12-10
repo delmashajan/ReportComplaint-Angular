@@ -14,6 +14,9 @@ export class ApiService {
   userRegister=(data:any)=>{
     return this.http.post("http://localhost:8080/userReg",data)
   }
+  getProfile=(data:any)=>{
+    return this.http.post("http://localhost:8080/profileview",data)
+  }
 
 
 }

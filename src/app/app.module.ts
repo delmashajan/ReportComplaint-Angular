@@ -11,6 +11,8 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UseRegisterComponent } from './use-register/use-register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminNavComponent } from './admin-nav/admin-nav.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
 
 
 const myRoute:Routes=[
@@ -29,7 +31,12 @@ const myRoute:Routes=[
   {
     path:"dashboard",
     component:DashboardComponent
+  },
+  {
+    path:"viewprofile",
+    component:ViewProfileComponent
   }
+
 ]
 
 @NgModule({
@@ -39,7 +46,9 @@ const myRoute:Routes=[
     UserLoginComponent,
     UseRegisterComponent,
     DashboardComponent,
-    AdminNavComponent
+    AdminNavComponent,
+    ViewProfileComponent,
+    UserNavComponent
   ],
   imports: [
     BrowserModule,
