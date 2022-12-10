@@ -21,6 +21,7 @@ export class UserLoginComponent {
     this.api.userLogin(data).subscribe(
       (response:any)=>{
         if(response.status=="success"){
+          localStorage.setItem("userInfo",response.userId)
           alert("login success")
         }else{
           alert("login failed")
