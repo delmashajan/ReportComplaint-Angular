@@ -21,12 +21,13 @@ export class UseRegisterComponent {
   readValue=()=>{
     let data:any={"address":this.address,"email":this.email,"name":this.name,"password":this.password,
     "username":this.username,"phone":this.phone}
-    this.api.userRegister(data).subscribe(
-      (response:any)=>{
-        if (response.status=="success") {
-          console.log(response)
-          alert("User Registration success")
-          this.route.navigate(["/userlogin"])
+    if(this.email != "" && this.password != ""){
+      this.api.userRegister(data).subscribe(
+        (response:any)=>{
+          if (response.status=="success") {
+            console.log(response)
+            alert("User Registration success")
+            this.route.navigate(["/userlogin"])
           
           
         } else {
@@ -35,7 +36,14 @@ export class UseRegisterComponent {
         }
       }
     )
+    }
+    else{
+      alert("email and password not given")
+    }
+    
   }
+  
+  
 
 
 }
